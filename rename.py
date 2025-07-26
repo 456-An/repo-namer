@@ -13,6 +13,12 @@ def rename_recursive(folder_path: Path, apply=False, ignore_dirs=None, use_git=F
     for root, dirs, files in os.walk(folder_path, topdown=False):
         # Filter ignored directories
         dirs[:] = [d for d in dirs if d not in ignore_dirs]
+        
+        # Skip files in ignored directories
+        current_path = Path(root)
+        if any(ignored in current_path.parts for ignored in ignore_dirs):
+            continue
+            
         # Rename files
         for name in files:
             old_path = Path(root) / name
