@@ -102,6 +102,31 @@ python rename.py test-folder --style upper-camel  # MyFolderName
 
 ---
 
+## 🖥️ GUI Version
+
+For users who prefer a graphical interface, you can also use the GUI version:
+
+```bash
+python gui.py
+```
+
+### GUI Features
+- 📁 Browse and select folders visually
+- 👀 Preview all changes before applying
+- ⚙️ Configure naming style and ignore directories
+- ✅ Apply changes with confirmation dialog
+- 📝 View detailed output in scrollable text area
+- 🎯 Drag and drop folders directly into the GUI
+- 🔄 Auto-preview after drag and drop
+
+---
+
+## 📝 License
+
+MIT License
+
+---
+
 # 🧹 repo-namer（中文版）
 
 > 自動清理與統一檔案／資料夾命名的 Python CLI 工具
@@ -205,3 +230,26 @@ python rename.py test-folder --style upper-camel  # MyFolderName
 - `test-folder/` 內含多種亂命名資料夾與檔案，方便測試
 
 ---
+
+## 🖥️ GUI 版本
+
+對於偏好圖形化介面的使用者，也可以使用 GUI 版本：
+
+```bash
+python gui.py
+```
+
+### GUI 功能
+- 📁 視覺化瀏覽與選擇資料夾
+- 👀 在套用前預覽所有變更
+- ⚙️ 設定命名風格與忽略資料夾
+- ✅ 透過確認對話框套用變更
+- 📝 在可捲動文字區域查看詳細輸出
+- 🎯 直接拖曳資料夾到 GUI 中
+- 🔄 拖曳後自動預覽變更
+
+---
+
+## 📝 授權
+
+MIT License
