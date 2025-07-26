@@ -121,12 +121,6 @@ python gui.py
 
 ---
 
-## 📝 License
-
-MIT License
-
----
-
 # 🧹 repo-namer（中文版）
 
 > 自動清理與統一檔案／資料夾命名的 Python CLI 工具
@@ -249,7 +243,3 @@ python gui.py
 - 🔄 拖曳後自動預覽變更
 
 ---
-
-## 📝 授權
-
-MIT License
