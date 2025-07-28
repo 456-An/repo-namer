@@ -11,12 +11,22 @@
 - 🔁 Recursively process entire folders
 - 🕵️‍♂️ Default is dry-run mode: preview changes only (use `--apply` to actually rename)
 - 🛠️ Customizable rules via `rules.json`
+- 🖥️ Modern GUI with drag-and-drop support
+- 🌐 Multi-language support (English/Chinese)
+- 📊 Multiple report formats (txt, csv, json)
 
 ---
 
 ## 📦 Installation
 
 > Requires only Python 3, no extra packages needed
+
+For modern GUI version, install PySide6:
+```bash
+pip install PySide6
+```
+
+> Note: `gui_tkinter.py` requires no additional packages (uses built-in Tkinter).
 
 ---
 
@@ -107,7 +117,7 @@ python rename.py test-folder --style upper-camel  # MyFolderName
 For users who prefer a graphical interface, you can also use the GUI version:
 
 ```bash
-python gui.py
+python gui_pyside6.py
 ```
 
 ### GUI Features
@@ -118,6 +128,39 @@ python gui.py
 - 📝 View detailed output in scrollable text area
 - 🎯 Drag and drop folders directly into the GUI
 - 🔄 Auto-preview after drag and drop
+- 🌐 Switch between English and Chinese interface
+- 📊 Export reports in multiple formats (txt, csv, json)
+- ✏️ Edit rules directly in GUI with instant reload
+- 🎨 Modern Material Design-like interface
+
+### Multiple GUI Options
+
+This project includes three different GUI implementations:
+
+| GUI File | Framework | Features | Dependencies | Recommended For |
+|----------|-----------|----------|-------------|-----------------|
+| `gui_pyside6.py` | PySide6 | Full features, modern UI | `pip install PySide6` | **Main version** |
+| `gui_tkinter.py` | Tkinter | Basic features | None (built-in) | Lightweight users |
+| `gui_pysimplegui.py` | PySimpleGUI | Historical version | `pip install PySimpleGUI` | Reference only |
+
+**Recommendation**: Use `gui_pyside6.py` for the best experience. Use `gui_tkinter.py` if you prefer minimal dependencies.
+
+---
+
+## 📁 Project Structure
+
+```
+repo-namer/
+├── rename.py              # Main CLI script
+├── cleaner.py             # Name cleaning logic
+├── gui_pyside6.py         # Modern GUI (PySide6) - Main version
+├── gui_tkinter.py         # Simple GUI (Tkinter) - Lightweight
+├── gui_pysimplegui.py     # Historical GUI (PySimpleGUI) - Reference
+├── rules.json             # Custom naming rules
+├── test-folder/           # Test directory
+├── LICENSE                # MIT License
+└── README.md              # This file
+```
 
 ---
 
@@ -134,12 +177,22 @@ python gui.py
 - 🔁 遞迴處理整個資料夾
 - 🕵️‍♂️ 預設為模擬模式，僅預覽將修改的項目（加上 `--apply` 才會實際改名）
 - 🛠️ 可自訂規則 via `rules.json`
+- 🖥️ 現代化 GUI 支援拖曳功能
+- 🌐 多語言支援（英文/中文）
+- 📊 多種報告格式（txt, csv, json）
 
 ---
 
 ## 📦 安裝方式
 
 > 只需 Python 3，免安裝額外套件
+
+現代化 GUI 版本需要安裝 PySide6：
+```bash
+pip install PySide6
+```
+
+> 注意：`gui_tkinter.py` 不需要額外套件（使用內建的 Tkinter）。
 
 ---
 
@@ -230,7 +283,7 @@ python rename.py test-folder --style upper-camel  # MyFolderName
 對於偏好圖形化介面的使用者，也可以使用 GUI 版本：
 
 ```bash
-python gui.py
+python gui_pyside6.py
 ```
 
 ### GUI 功能
@@ -241,5 +294,38 @@ python gui.py
 - 📝 在可捲動文字區域查看詳細輸出
 - 🎯 直接拖曳資料夾到 GUI 中
 - 🔄 拖曳後自動預覽變更
+- 🌐 中英文介面一鍵切換
+- 📊 多種報告格式匯出（txt, csv, json）
+- ✏️ 直接在 GUI 中編輯規則並即時生效
+- 🎨 現代化 Material Design 風格介面
+
+### 多種 GUI 選擇
+
+本專案包含三種不同的 GUI 實作：
+
+| GUI 檔案 | 框架 | 功能 | 依賴套件 | 推薦對象 |
+|----------|------|------|----------|----------|
+| `gui_pyside6.py` | PySide6 | 完整功能，現代化介面 | `pip install PySide6` | **主要版本** |
+| `gui_tkinter.py` | Tkinter | 基本功能 | 無（內建） | 輕量級使用者 |
+| `gui_pysimplegui.py` | PySimpleGUI | 歷史版本 | `pip install PySimpleGUI` | 僅供參考 |
+
+**建議**：使用 `gui_pyside6.py` 獲得最佳體驗。偏好最小依賴者可選擇 `gui_tkinter.py`。
+
+---
+
+## 📁 專案結構
+
+```
+repo-namer/
+├── rename.py              # 主要 CLI 腳本
+├── cleaner.py             # 命名清理邏輯
+├── gui_pyside6.py         # 現代化 GUI（PySide6）- 主要版本
+├── gui_tkinter.py         # 簡單 GUI（Tkinter）- 輕量級
+├── gui_pysimplegui.py     # 歷史版本 GUI（PySimpleGUI）- 參考用
+├── rules.json             # 自訂命名規則
+├── test-folder/           # 測試目錄
+├── LICENSE                # MIT 授權
+└── README.md              # 本檔案
+```
 
 ---
