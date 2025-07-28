@@ -1,9 +1,32 @@
 import re
 import json
 
-# Load naming conversion rules
-with open("rules.json", encoding="utf-8") as f:
-    RULES = json.load(f)
+# Global variable to store rules
+RULES = {}
+
+def load_rules():
+    """Load naming conversion rules from rules.json"""
+    global RULES
+    try:
+        with open("rules.json", encoding="utf-8") as f:
+            RULES = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        # Default rules if file doesn't exist or is invalid
+        RULES = {
+            "c#": "csharp",
+            "c++": "cpp",
+            " ": "-",
+            "+": "",
+            "#": "",
+            "&": "and"
+        }
+
+def reload_rules():
+    """Reload rules from rules.json file"""
+    load_rules()
+
+# Load rules on module import
+load_rules()
 
 def clean_name(name: str, style='kebab') -> str:
     name = name.lower()
